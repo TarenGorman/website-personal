@@ -7,12 +7,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <div className="Background">
+          <Background/>
+        </div>
+        <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Under Construction</h1>
-        </header>
-        <div className="Background">
-        <Background/>
+        </div>
+        <div className="Footer">
         </div>
       </div>
     );
@@ -42,7 +44,7 @@ class Background extends Component {
 			vertex.z = (Math.random() * 1600) - 800;
 			geometry.vertices.push( vertex );
 		}
-    const material = new THREE.PointsMaterial( { size: 0.001 , color: 0x32ed7a} );
+    const material = new THREE.PointsMaterial( { size: 2.0 , color: 0x0dd6dd} );
     this.points = new THREE.Points(geometry, material)
     this.scene.add( this.points )
   }
@@ -52,10 +54,10 @@ class Background extends Component {
     this.clock = new THREE.Clock();
 
     this.camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
-    this.camera.position.z = 1000;
+    this.camera.position.z = -400;
 
     const geometry = new THREE.BoxGeometry( 200, 200, 200 );
-    const material = new THREE.MeshBasicMaterial( { color: 0x0dd6dd, wireframe: true } );
+    const material = new THREE.MeshBasicMaterial( { color: 0x10d26f, wireframe: true } );
 
     this.mesh = new THREE.Mesh( geometry, material );
     this.scene.add( this.mesh );
@@ -63,6 +65,7 @@ class Background extends Component {
 
     this.renderer = new THREE.WebGLRenderer({alpha:true});
     this.renderer.setSize( window.innerWidth, window.innerHeight );
+    this.mesh.position.z = -1400
 
     document.body.append( this.renderer.domElement );
   }
@@ -72,10 +75,14 @@ class Background extends Component {
     const dt = this.clock.getDelta()
     this.mesh.rotation.x += .01 * dt;
     this.mesh.rotation.y += 0.02;
-    this.points.rotation.y -= 0.002;
+    this.points.rotation.x -= 0.002;
+
+    this.renderer.setSize( window.innerWidth, window.innerHeight );
+    this.camera.aspect = ( window.innerWidth / window.innerHeight );
+
 
     this.renderer.render( this.scene, this.camera );
-
+    this.camera.updateProjectionMatrix();
   }
 
   render() {
