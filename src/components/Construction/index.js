@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
 import logo from './hammer.jpg';
-import './App.css';
+import './index..css';
 
-class App extends Component {
+class Construction extends Component {
   render() {
     return (
       <div className="App">
@@ -92,4 +92,4 @@ class Background extends Component {
   }
 }
 
-export default App;
+export default Construction;
