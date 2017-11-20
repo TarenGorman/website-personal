@@ -1,0 +1,16 @@
+.Header {
+  position: fixed;
+  width: 100%;
+  opacity: 0.5;
+  height: 70%;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  top: 0;
+  z-index: 10;
+  color: #131313;
+  background-color: #ffffff;
+}
+
+.Header-title {
+  font-size: 0.8em;
+}

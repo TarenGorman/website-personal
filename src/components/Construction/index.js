@@ -6,13 +6,13 @@ import './index..css';
 class Construction extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="Construction">
         <div className="Background">
           <Background/>
         </div>
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Under Construction</h1>
+        <div className="Construction-header">
+          <img src={logo} className="Construction-logo" alt="logo" />
+          <h1 className="Construction-title">Under Construction</h1>
         </div>
         <div className="Footer">
         </div>
