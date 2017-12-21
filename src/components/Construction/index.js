@@ -10,12 +10,6 @@ class Construction extends Component {
         <div className="Background">
           <Background/>
         </div>
-        <div className="Construction-header">
-          <img src={logo} className="Construction-logo" alt="logo" />
-          <h1 className="Construction-title">Under Construction</h1>
-        </div>
-        <div className="Footer">
-        </div>
       </div>
     );
   }
@@ -87,7 +81,7 @@ class Background extends Component {
 
   render() {
     return (
-      <canvas ref={ el => { this.canvas = el }} style={{position:'absolute',bottom:0,right:0}}></canvas>
+      <canvas ref={ el => { this.canvas = el }}></canvas>
     );
   }
 }

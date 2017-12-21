@@ -5,9 +5,9 @@ import './index..css';
 class Header extends Component {
   render() {
     return (
-      <div className="Header">
-        <h1 className="Header-title">Under Construction</h1>
-      </div>
+      <header>
+        <h1 className="Header-title">Taren Gorman</h1>
+      </header>
     );
   }
 }
