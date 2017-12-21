@@ -6,12 +6,39 @@ header {
   top: 0;
   left: 0;
   opacity: 1.0;
-  background-color: #ffffff;
+  background-color: #bebebe;
   overflow: hidden;
 }
 
 .Header-title {
-  color: #131313;
-  text-align: left;
-  font-size: 2.0em;
+  float:left;
+  padding: 0px 16px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    overflow: hidden;
+    font-size: 1.5em;
+    font-family: verdana;
+}
+
+li {
+    float: right;
+    border-right: 2px solid #303030;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
 }
