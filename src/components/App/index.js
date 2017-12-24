@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import * as THREE from 'three';
 import './index..css';
-import Construction from '../Construction';
-import Header from '../Header';
+import Navigation from '../Navigation';
 import Footer from '../Footer';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header/>
-        <Construction/>
+        <Navigation/>
         <Footer/>
       </div>
     );
