@@ -6,10 +6,8 @@ import './index..css';
 class Construction extends Component {
   render() {
     return (
-      <div className="Construction">
-        <div className="Background">
-          <Background/>
-        </div>
+      <div className="Background">
+        <Background/>
       </div>
     );
   }
@@ -27,6 +25,9 @@ class Background extends Component {
   componentDidMount() {
     this.init()
     this.animate()
+  }
+  componentWillUnmount() {
+    this.renderer.domElement.remove()
   }
 
   initPoints() {
@@ -81,7 +82,8 @@ class Background extends Component {
 
   render() {
     return (
-      <canvas ref={ el => { this.canvas = el }}></canvas>
+      <canvas ref={ el => { this.canvas = el }} height = { window.innerHeight }
+      width = { window.innerWidth }></canvas>
     );
   }
 }

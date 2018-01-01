@@ -10,6 +10,20 @@ header {
   overflow: hidden;
 }
 
+.nav-content {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
 .header-title {
   float:left;
   padding: 0px 16px;
@@ -40,5 +54,5 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #111;
+    background-color: #5c5656;
 }

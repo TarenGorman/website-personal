@@ -26,7 +26,7 @@ class Navigation extends Component {
             </ul>
           </header>
           <div className="content">
-            <Route exact path="/" component={About}/>
+            <Route exact path="/" component={Construction}/>
             <Route path="/projects" component={Projects}/>
             <Route path="/contact" component={Contact}/>
           </div>
