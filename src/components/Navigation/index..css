@@ -1,7 +1,14 @@
+.content {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
 header {
   margin: 0px;
   padding: 0px;
-  height: 70px;
+  height: 65px;
   width: 100%;
   top: 0;
   left: 0;
@@ -10,26 +17,13 @@ header {
   overflow: hidden;
 }
 
-.nav-content {
-  margin: 0px;
-  padding: 0px;
-  height: 100%;
-  width: 100%;
-}
-
-.content {
-  margin: 0px;
-  padding: 0px;
-  height: 100%;
-  width: 100%;
-}
-
 .header-title {
+  position: relative;
   float:left;
-  padding: 0px 16px;
+  padding: 0px 24px;
 }
 
-ul {
+.navbar {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
@@ -39,12 +33,12 @@ ul {
     font-family: verdana;
 }
 
-li {
+.navbar li {
     float: right;
     border-right: 2px solid #303030;
 }
 
-li a {
+.navbar li a {
     display: block;
     color: black;
     text-align: center;
@@ -53,6 +47,52 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+.navbar li a:hover {
     background-color: #5c5656;
+}
+
+.navbar-mobile {
+  display: block;
+}
+
+.fa {
+  float: right;
+  cursor: pointer;
+  font-size: 2.5em;
+  padding: 16px 16px;
+}
+
+.mobile-links {
+  position: absolute;
+  margin-top: 65px;
+  display: block;
+  background-color: #bebebe;
+  width: 100%;
+  font-size: 1.5em;
+  font-family: verdana;
+}
+
+.mobile-links li {
+  float: none;
+  border-bottom: 2px solid #303030;
+  border-top: 2px solid #303030;
+  display: block;
+  text-align: left;
+  height: 65px;
+}
+
+.mobile-links li a {
+  float:none;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+.nav-wrapper {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
 }
