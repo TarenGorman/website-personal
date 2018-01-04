@@ -82,7 +82,7 @@ class Background extends Component {
 
   render() {
     return (
-      <canvas ref={ el => { this.canvas = el }} height = { window.innerHeight }
+      <canvas height = { window.innerHeight }
       width = { window.innerWidth }></canvas>
     );
   }

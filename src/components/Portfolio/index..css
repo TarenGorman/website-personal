@@ -1,0 +1,24 @@
+.page {
+}
+
+.hero-image {
+  background-image: url("../../images/planet.jpg");
+  height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: verdana;
+}
+
+.flight-container {
+  height: 100%;
+}

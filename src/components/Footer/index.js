@@ -6,7 +6,12 @@ class Footer extends Component {
   render() {
     return (
       <footer>
-        <h1 className="Footer-title">Under Construction</h1>
+        <h1 className="Footer-title">Taren Gorman</h1>
+        <ul>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/">About</a></li>
+        </ul>
       </footer>
     );
   }

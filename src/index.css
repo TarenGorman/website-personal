@@ -16,5 +16,5 @@ body {
   top: 0;
   left: 0;
   margin: 0;
-  position: absolute;; /*When fixed, hides canvas threejs behind all css */
+  position: absolute; /*When fixed, hides canvas threejs behind all css */
 }

@@ -6,10 +6,9 @@ import {
   HashRouter
 } from 'react-router-dom';
 
+import Portfolio from '../Portfolio';
 import About from '../About';
-import Projects from '../Projects';
 import Contact from '../Contact';
-import Construction from '../Construction';
 
 import 'font-awesome/css/font-awesome.min.css'
 import './index..css';
@@ -35,20 +34,19 @@ class Navigation extends Component {
       <HashRouter>
         <div className="nav-wrapper">
           <header>
-            <h1 className="header-title">Taren Gorman</h1>
-            <MediaQuery minDeviceWidth={640} component="div" className="navbar">
+            <MediaQuery minDeviceWidth={990} component="div" className="navbar">
               <li><NavLink to="/contact">Contact</NavLink></li>
-              <li><NavLink to="/projects">Projects</NavLink></li>
-              <li><NavLink to="/">About</NavLink></li>
+              <li><NavLink to="/projects">About</NavLink></li>
+              <li><NavLink to="/">Portfolio</NavLink></li>
             </MediaQuery>
-            <MediaQuery maxDeviceWidth={640} component="div" className="navbar-mobile">
+            <MediaQuery maxDeviceWidth={990} component="div" className="navbar-mobile">
               <i className="fa fa-bars" onClick={ this.toggleDropped }></i>
               {this.state.isDropped && <Menu toggleDropped={ this.toggleDropped }/>}
             </MediaQuery>
           </header>
           <div className="content">
-            <Route exact path="/" component={ Construction }/>
-            <Route path="/projects" component={ Projects }/>
+            <Route exact path="/" component={ Portfolio }/>
+            <Route path="/projects" component={ About }/>
             <Route path="/contact" component={ Contact }/>
           </div>
         </div>
@@ -60,8 +58,8 @@ class Navigation extends Component {
 const Menu = ({ toggleDropped = () => {} }) => {
   return (
     <div className="mobile-links">
-      <li><NavLink to="/" onClick={ toggleDropped }>About</NavLink></li>
-      <li><NavLink to="/projects" onClick={ toggleDropped }>Projects</NavLink></li>
+      <li><NavLink to="/" onClick={ toggleDropped }>Portfolio</NavLink></li>
+      <li><NavLink to="/projects" onClick={ toggleDropped }>About</NavLink></li>
       <li><NavLink to="/contact" onClick={ toggleDropped }>Contact</NavLink></li>
     </div>
   );
