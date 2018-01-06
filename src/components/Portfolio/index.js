@@ -21,10 +21,10 @@ class Portfolio extends Component {
         </div>
         <div className="work-container">
           <h2> Recent Projects </h2>
-          <MediaQuery minDeviceWidth={1090} component="div" className="work-grid">
+          <MediaQuery minDeviceWidth={1115} component="div" className="work-grid">
             <ColumnItems/>
           </MediaQuery>
-          <MediaQuery maxDeviceWidth={1090} component="div" className="work-grid-mobile">
+          <MediaQuery maxDeviceWidth={1115} component="div" className="work-grid-mobile">
             <ColumnItems/>
           </MediaQuery>
         </div>

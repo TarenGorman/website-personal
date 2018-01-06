@@ -34,19 +34,19 @@ class Navigation extends Component {
       <HashRouter>
         <div className="nav-wrapper">
           <header>
-            <MediaQuery minDeviceWidth={990} component="div" className="navbar">
+            <MediaQuery minDeviceWidth={1115} component="div" className="navbar">
               <li><NavLink to="/contact">Contact</NavLink></li>
-              <li><NavLink to="/projects">About</NavLink></li>
+              <li><NavLink to="/about">About</NavLink></li>
               <li><NavLink to="/">Portfolio</NavLink></li>
             </MediaQuery>
-            <MediaQuery maxDeviceWidth={990} component="div" className="navbar-mobile">
+            <MediaQuery maxDeviceWidth={1115} component="div" className="navbar-mobile">
               <i className="fa fa-bars" onClick={ this.toggleDropped }></i>
               {this.state.isDropped && <Menu toggleDropped={ this.toggleDropped }/>}
             </MediaQuery>
           </header>
           <div className="content-container">
             <Route exact path="/" component={ Portfolio }/>
-            <Route path="/projects" component={ About }/>
+            <Route path="/about" component={ About }/>
             <Route path="/contact" component={ Contact }/>
           </div>
         </div>

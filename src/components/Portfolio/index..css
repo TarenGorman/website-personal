@@ -60,11 +60,6 @@ img {
   text-align: center;
 }
 
-.page {
-  height: 100%;
-  overflow: auto;
-}
-
 .work-container {
   width: 100%;
   height: auto;
