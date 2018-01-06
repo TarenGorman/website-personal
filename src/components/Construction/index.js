@@ -71,8 +71,9 @@ class Construction extends Component {
     const dt = this.clock.getDelta()
     this.mesh.rotation.x += 0.008;
     this.points.rotation.y += 0.002;
-
-    this.onWindowResize()
+    if (this.mount !== null) {
+      this.onWindowResize()
+    }
     this.renderer.setSize( this.width, this.height, false);
     this.camera.aspect = ( this.width / this.height );
     this.renderer.render( this.scene, this.camera );

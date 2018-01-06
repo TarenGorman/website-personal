@@ -1,5 +1,5 @@
 .content {
-  margin: 0px;
+  margin-top: 0px;
   padding: 0px;
   height: 100%;
   width: 100%;
@@ -16,12 +16,13 @@ header {
   opacity: 1.0;
   background-color: #bebebe;
   overflow: hidden;
+  position:fixed;
 }
 
 .navbar {
     list-style-type: none;
     margin: 0px;
-    padding: 0px;
+    padding-right: 15%;
     height: 100%;
     overflow: hidden;
     font-size: 1.5em;
@@ -41,9 +42,8 @@ header {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 .navbar li a:hover {
-    background-color: #5c5656;
+    background-color: #302e2e;
 }
 
 .navbar-mobile {
@@ -64,7 +64,6 @@ header {
   background-color: #bebebe;
   width: 100%;
   font-size: 1.5em;
-  font-family: verdana;
 }
 
 .mobile-links li {
@@ -90,5 +89,5 @@ header {
   padding: 0px;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow: none;
 }
