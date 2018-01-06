@@ -1,33 +1,33 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
-import logo from './hammer.jpg';
 import './index..css';
 
 class Construction extends Component {
-  render() {
-    return (
-      <div className="Background">
-        <Background/>
-      </div>
-    );
-  }
-}
-
-class Background extends Component {
   constructor(props) {
     super(props)
 
-    this.animate = this.animate.bind(this)
-    this.mesh = {}
-    this.points = {}
+    this.animate = this.animate.bind(this);
+    this.mesh = {};
+    this.points = {};
   }
 
   componentDidMount() {
     this.init()
+    this.mount.appendChild( this.renderer.domElement );
     this.animate()
   }
+
   componentWillUnmount() {
-    this.renderer.domElement.remove()
+    this.mount.removeChild( this.renderer.domElement );
+  }
+
+  onWindowResize() {
+    // Event Listener possibility
+    if (this.height !== this.mount.clientHeight || this.width !== this.mount.clientWidth) {
+      this.height = this.mount.clientHeight;
+      this.width = this.mount.clientWidth;
+      console.log("resized")
+    }
   }
 
   initPoints() {
@@ -44,46 +44,44 @@ class Background extends Component {
     this.scene.add( this.points )
   }
 
+  initBox() {
+    const geometry = new THREE.BoxGeometry( 400, 200, 200 , 2, 5, 5);
+    const material = new THREE.MeshBasicMaterial( { color: 0x10d26f, wireframe: true } );
+    this.mesh = new THREE.Mesh( geometry, material );
+    this.scene.add( this.mesh );
+    this.mesh.position.z = -800
+  }
+
   init() {
+    this.height = this.mount.clientHeight;
+    this.width = this.mount.clientWidth;
     this.scene = new THREE.Scene();
     this.clock = new THREE.Clock();
 
-    this.camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+    this.camera = new THREE.PerspectiveCamera( 75, this.width / this.height, 1, 10000 );
     this.camera.position.z = -400;
-
-    const geometry = new THREE.BoxGeometry( 200, 200, 200 );
-    const material = new THREE.MeshBasicMaterial( { color: 0x10d26f, wireframe: true } );
-
-    this.mesh = new THREE.Mesh( geometry, material );
-    this.scene.add( this.mesh );
-    this.initPoints();
-
     this.renderer = new THREE.WebGLRenderer({alpha:true});
-    this.renderer.setSize( window.innerWidth, window.innerHeight );
-    this.mesh.position.z = -1400
 
-    document.body.append( this.renderer.domElement );
+    this.initBox();
+    this.initPoints();
   }
 
   animate() {
     requestAnimationFrame( this.animate );
     const dt = this.clock.getDelta()
-    this.mesh.rotation.x += .01 * dt;
-    this.mesh.rotation.y += 0.02;
-    this.points.rotation.x -= 0.002;
+    this.mesh.rotation.x += 0.008;
+    this.points.rotation.y += 0.002;
 
-    this.renderer.setSize( window.innerWidth, window.innerHeight );
-    this.camera.aspect = ( window.innerWidth / window.innerHeight );
-
-
+    this.onWindowResize()
+    this.renderer.setSize( this.width, this.height, false);
+    this.camera.aspect = ( this.width / this.height );
     this.renderer.render( this.scene, this.camera );
     this.camera.updateProjectionMatrix();
   }
 
   render() {
     return (
-      <canvas height = { window.innerHeight }
-      width = { window.innerWidth }></canvas>
+      <div className="container" ref={(mount) => { this.mount = mount }}/>
     );
   }
 }

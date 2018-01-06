@@ -1,8 +1,9 @@
 .content {
   margin: 0px;
   padding: 0px;
-  height: auto;
+  height: 100%;
   width: 100%;
+  overflow: auto;
 }
 
 header {
@@ -87,6 +88,7 @@ header {
 .nav-wrapper {
   margin: 0px;
   padding: 0px;
-  height: auto;
+  height: 100%;
   width: 100%;
+  overflow: hidden;
 }

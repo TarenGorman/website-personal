@@ -12,7 +12,7 @@ class Portfolio extends Component {
           <div className="hero-text">
           <h1>Taren Gorman
             <br/>
-              Data Scientist and Engineer
+              Data Scientist & Engineer
           </h1>
           </div>
         </div>
