@@ -3,7 +3,7 @@
   padding: 0px;
   height: 100%;
   width: 100%;
-  overflow: auto;
+  overflow: hidden;
 }
 
 header {
@@ -16,7 +16,7 @@ header {
   opacity: 1.0;
   background-color: #bebebe;
   overflow: hidden;
-  position:fixed;
+  position: fixed;
 }
 
 .navbar {
@@ -58,7 +58,7 @@ header {
 }
 
 .mobile-links {
-  position: absolute;
+  position: fixed;
   margin-top: 65px;
   display: block;
   background-color: #bebebe;
