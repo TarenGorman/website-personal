@@ -15,7 +15,7 @@ class Portfolio extends Component {
           <div className="hero-text">
           <h1>Taren Gorman
             <br/>
-              Data Scientist & Engineer
+              Data Science & Programming
           </h1>
           </div>
         </div>
@@ -65,7 +65,7 @@ class ColumnItems extends Component {
         <div className="work-col">
           <img src={require("../../images/planet.jpg")}/>
           <h4> Unity sample games </h4>
-          <h5> Games produced from courses with highlighted personal additions </h5>
+          <h5> Games produced from courses with highlighted additions </h5>
         </div>
         <div className="work-col">
           <img src={require("../../images/planet.jpg")}/>

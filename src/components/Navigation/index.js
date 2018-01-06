@@ -3,7 +3,7 @@ import MediaQuery from 'react-responsive';
 import {
   Route,
   NavLink,
-  HashRouter
+  BrowserRouter,
 } from 'react-router-dom';
 
 import Portfolio from '../Portfolio';
@@ -31,7 +31,7 @@ class Navigation extends Component {
 
   render() {
     return (
-      <HashRouter>
+      <BrowserRouter>
         <div className="nav-wrapper">
           <header>
             <MediaQuery minDeviceWidth={1115} component="div" className="navbar">
@@ -50,7 +50,7 @@ class Navigation extends Component {
             <Route path="/contact" component={ Contact }/>
           </div>
         </div>
-      </HashRouter>
+      </BrowserRouter>
     );
   }
 }
@@ -59,7 +59,7 @@ const Menu = ({ toggleDropped = () => {} }) => {
   return (
     <div className="mobile-links">
       <li><NavLink to="/" onClick={ toggleDropped }>Portfolio</NavLink></li>
-      <li><NavLink to="/projects" onClick={ toggleDropped }>About</NavLink></li>
+      <li><NavLink to="/about" onClick={ toggleDropped }>About</NavLink></li>
       <li><NavLink to="/contact" onClick={ toggleDropped }>Contact</NavLink></li>
     </div>
   );

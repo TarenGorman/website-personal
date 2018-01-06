@@ -70,8 +70,10 @@ img {
 .work-grid {
   padding-top: 5%;
   padding-bottom: 5%;
+  margin-right: 12%;
+  margin-left: 12%;
   height: 80%;
-  width: 100%;
+  width: 76%;
 }
 
 .work-grid-mobile {
@@ -87,8 +89,8 @@ img {
   padding: 1.0% 1.5%;
   margin: 1.0%;
   margin-bottom: 5%;
-  height: 450px;
-  width: 500px;
+  height: 350px;
+  width: 400px;
   background-color: #9c9c9c;
 }
 
