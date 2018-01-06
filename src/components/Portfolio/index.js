@@ -11,7 +11,7 @@ class Portfolio extends Component {
   render() {
     return (
       <div className="page">
-        <div className="hero-image">
+        <div className="hero-image" style={{ height: window.innerWidth / 1.65 }}>
           <div className="hero-text">
           <h1>Taren Gorman
             <br/>
@@ -20,6 +20,7 @@ class Portfolio extends Component {
           </div>
         </div>
         <div className="work-container">
+          <h2> Recent Projects </h2>
           <MediaQuery minDeviceWidth={1090} component="div" className="work-grid">
             <ColumnItems/>
           </MediaQuery>

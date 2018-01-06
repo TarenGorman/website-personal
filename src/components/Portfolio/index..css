@@ -2,16 +2,25 @@
   height: 400px;
 }
 
+h2 {
+  z-index: 0;
+  text-align: center;
+  padding-top: 5%;
+  font-size: 2.0em;
+}
+
 h4 {
+  margin-left: 3%;
   top: 0px;
-  margin-top: 0px;
-  margin-bottom: 5px;
+  margin-top: 1%;
+  margin-bottom: 1%;
   color: #323132;
   text-align: left;
   font-size: 2.0em;
 }
 
 h5 {
+  margin-left: 3%;
   top: 0px;
   margin-top: 0px;
   color: black;
@@ -23,20 +32,19 @@ h5 {
 .hero-image {
   margin-top: -45px;
   background-image: url("../../images/seattle1.jpg");
-  height: 140%;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: top;
+  background-size: 100% auto;
 }
 
 .hero-text {
   text-align: center;
-  position: relative;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -20%);
+  padding-top: 30%;
   color: white;
-  font-size: 2.0em;
+  font-size: 2.0vw;
 }
 
 img {
@@ -66,11 +74,14 @@ img {
 
 .work-grid {
   padding-top: 5%;
+  padding-bottom: 5%;
   height: 80%;
   width: 100%;
 }
 
 .work-grid-mobile {
+  padding-top: 5%;
+  padding-bottom: 5%;
   height: 80%;
   width: 100%;
 }
@@ -79,17 +90,20 @@ img {
   display: inline-block;
   vertical-align: middle;
   padding: 1.0% 1.5%;
-  margin: 0.5%;
+  margin: 1.0%;
   margin-bottom: 5%;
-  width: 500px;
   height: 450px;
+  width: 500px;
   background-color: #9c9c9c;
 }
 
 .work-grid-mobile .items .work-col {
   display: inline-block;
   vertical-align: middle;
-  width: 100%;
+  padding: 1.0% 1.5%;
+  margin: 2.0%;
   height: 100%;
+  width: 92%;
   background-color: #9c9c9c;
+  font-size: 2.0vw;
 }

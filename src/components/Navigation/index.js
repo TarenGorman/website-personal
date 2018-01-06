@@ -44,7 +44,7 @@ class Navigation extends Component {
               {this.state.isDropped && <Menu toggleDropped={ this.toggleDropped }/>}
             </MediaQuery>
           </header>
-          <div className="content">
+          <div className="content-container">
             <Route exact path="/" component={ Portfolio }/>
             <Route path="/projects" component={ About }/>
             <Route path="/contact" component={ Contact }/>

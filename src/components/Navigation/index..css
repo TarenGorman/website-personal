@@ -1,4 +1,4 @@
-.content {
+.content-container {
   margin-top: 0px;
   padding: 0px;
   height: 100%;
@@ -13,7 +13,7 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 1.0;
+  opacity: 0.5;
   background-color: #bebebe;
   overflow: hidden;
   position: fixed;
@@ -26,7 +26,6 @@ header {
     height: 100%;
     overflow: hidden;
     font-size: 1.5em;
-    font-family: verdana;
 }
 
 .navbar li {
