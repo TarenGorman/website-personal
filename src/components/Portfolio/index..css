@@ -49,7 +49,7 @@ h5 {
 
 img {
   text-align: center;
-  display: cover;
+  display: contain;
   width: 100%;
 }
 
@@ -89,7 +89,7 @@ img {
   padding: 1.0% 1.5%;
   margin: 1.0%;
   margin-bottom: 5%;
-  height: 350px;
+  height: 400px;
   width: 400px;
   background-color: #9c9c9c;
 }

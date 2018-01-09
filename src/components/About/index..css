@@ -28,7 +28,10 @@ p {
 .picture {
   display: inline-block;
   vertical-align: middle;
-  background-image: none;
+  background-image: url("../../images/200_normal.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
   padding: 1.0% 1.5%;
   margin: 1.0%;
   height: 200px;

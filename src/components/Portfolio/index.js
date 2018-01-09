@@ -42,33 +42,28 @@ class ColumnItems extends Component {
     return (
       <div className="items">
         <div className="work-col">
-          <img src={require("../../images/planet.jpg")}/>
+          <img src={require("../../images/sindy2.png")}/>
           <h4> Pendulum Discovery </h4>
           <h5> Sparse Identification of Nonlinear Dynamics </h5>
         </div>
         <div className="work-col">
-          <img src={require("../../images/planet.jpg")}/>
+          <img src={require("../../images/rl-trader.jpg")}/>
           <h4> Neural Trader </h4>
           <h5> Automated market trader using Recursive Neural Net
            </h5>
         </div>
         <div className="work-col">
-          <img src={require("../../images/planet.jpg")}/>
+          <img src={require("../../images/photon.jpg")}/>
           <h4> Photon Fighter </h4>
           <h5> 48 Hr Game Jam team production </h5>
         </div>
         <div className="work-col">
-          <img src={require("../../images/planet.jpg")}/>
+          <img src={require("../../images/test.png")}/>
           <h4> C++ Parrellization </h4>
           <h5> Class project to optimize matrix multiplication </h5>
         </div>
         <div className="work-col">
-          <img src={require("../../images/planet.jpg")}/>
-          <h4> Unity sample games </h4>
-          <h5> Games produced from courses with highlighted additions </h5>
-        </div>
-        <div className="work-col">
-          <img src={require("../../images/planet.jpg")}/>
+          <img src={require("../../images/laser.jpg")}/>
           <h4> Optics Labs </h4>
           <h5> Collection of reports for optics lab </h5>
         </div>
