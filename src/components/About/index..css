@@ -63,6 +63,7 @@ p {
   margin-top: 0px;
   margin-bottom: 100px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .resume-mobile {
