@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import * as THREE from 'three';
 import './index..css';
 import Construction from '../Construction';
 import Footer from '../Footer';

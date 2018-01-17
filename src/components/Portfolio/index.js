@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import * as THREE from 'three';
 import './index..css';
 import Construction from '../Construction';
 import Footer from '../Footer';
@@ -42,28 +41,28 @@ class ColumnItems extends Component {
     return (
       <div className="items">
         <div className="work-col">
-          <img src={require("../../images/sindy2.png")}/>
+          <img src={require("../../images/sindy2.png")} alt="Project"/>
           <h4> Pendulum Discovery </h4>
           <h5> Sparse Identification of Nonlinear Dynamics </h5>
         </div>
         <div className="work-col">
-          <img src={require("../../images/rl-trader.jpg")}/>
+          <img src={require("../../images/rl-trader.jpg")} alt="Project"/>
           <h4> Neural Trader </h4>
           <h5> Automated market trader using Recursive Neural Net
            </h5>
         </div>
         <div className="work-col">
-          <img src={require("../../images/photon.jpg")}/>
+          <img src={require("../../images/photon.jpg")} alt="Project"/>
           <h4> Photon Fighter </h4>
           <h5> 48 Hr Game Jam team production </h5>
         </div>
         <div className="work-col">
-          <img src={require("../../images/test.png")}/>
+          <img src={require("../../images/test.png")} alt="Project"/>
           <h4> C++ Parrellization </h4>
           <h5> Class project to optimize matrix multiplication </h5>
         </div>
         <div className="work-col">
-          <img src={require("../../images/laser.jpg")}/>
+          <img src={require("../../images/laser.jpg")} alt="Project"/>
           <h4> Optics Labs </h4>
           <h5> Collection of reports for optics lab </h5>
         </div>

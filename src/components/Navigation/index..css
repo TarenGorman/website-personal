@@ -1,3 +1,27 @@
+.fa {
+  float: right;
+  cursor: pointer;
+  font-size: 2.4em;
+  padding: 16px 16px;
+  overflow-y: hidden;
+}
+
+header {
+  margin: 0px;
+  padding: 0px;
+  height: 70px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1.0;
+  background-color: #FFFFFF;
+  border-bottom-width: thin;
+  border-bottom-style: groove;
+  border-color: #f4f4f4;
+  position: fixed;
+  z-index: 1;
+}
+
 .content-container {
   margin-top: 0px;
   padding: 0px;
@@ -6,17 +30,44 @@
   overflow: hidden;
 }
 
-header {
+.mobile-links {
+  position: fixed !important;
+  z-index: 1 !important;
+  top: 70px;
+  border-top-style: groove;
+  border-top-width: thin;
+  border-top-color: #f4f4f4;
+  display: inline-block;
+  background-color: #FFFFFF;
+  width: 100%;
+  font-size: 1.5em;
+}
+
+.mobile-links li {
+  float: none;
+  border-bottom-style: groove;
+  border-bottom-width: thin;
+  border-bottom-color: #f4f4f4;
+  display: block;
+  text-align: left;
+  height: 65px;
+}
+
+.mobile-links li a {
+  float:none;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+.nav-wrapper {
   margin: 0px;
   padding: 0px;
-  height: 65px;
+  height: 100%;
   width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.5;
-  background-color: #bebebe;
-  overflow: hidden;
-  position: fixed;
+  overflow: none;
 }
 
 .navbar {
@@ -47,46 +98,4 @@ header {
 
 .navbar-mobile {
   display: block;
-}
-
-.fa {
-  float: right;
-  cursor: pointer;
-  font-size: 2.5em;
-  padding: 16px 16px;
-}
-
-.mobile-links {
-  position: fixed;
-  margin-top: 65px;
-  display: block;
-  background-color: #bebebe;
-  width: 100%;
-  font-size: 1.5em;
-}
-
-.mobile-links li {
-  float: none;
-  border-bottom: 2px solid #303030;
-  border-top: 2px solid #303030;
-  display: block;
-  text-align: left;
-  height: 65px;
-}
-
-.mobile-links li a {
-  float:none;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 20px 16px;
-  text-decoration: none;
-}
-
-.nav-wrapper {
-  margin: 0px;
-  padding: 0px;
-  height: 100%;
-  width: 100%;
-  overflow: none;
 }

@@ -37,7 +37,7 @@ class About extends Component {
   }
 }
 
-const Resume = ({ }) => {
+const Resume = () => {
   return (
     <div>
       <MediaQuery minDeviceWidth={1115} component="div" className="resume">
