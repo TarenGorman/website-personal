@@ -26,7 +26,7 @@ class About extends Component {
         <div className="resume-container">
           <h1> Resume </h1>
           <Resume/>
-          <h2><a href={require("../../images/primary_resume.pdf")} download="Taren_Gorman_Resume_2018"> Download Resume </a></h2>
+          <h1><a href={require("../../images/primary_resume.pdf")} download="Taren_Gorman_Resume_2018"> Download Resume </a></h1>
         </div>
         <div className="flight-container">
           <Construction/>

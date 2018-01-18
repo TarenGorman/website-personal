@@ -52,6 +52,9 @@ class ColumnItems extends Component {
            </h5>
         </div>
         <div className="work-col">
+          <a href="https://github.com/Photon-Fighter/Photon-Fighter">
+            <span className="link-spanner"></span>
+          </a>
           <img src={require("../../images/photon.jpg")} alt="Project"/>
           <h4> Photon Fighter </h4>
           <h5> 48 Hr Game Jam team production </h5>

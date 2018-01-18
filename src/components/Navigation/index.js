@@ -8,7 +8,6 @@ import {
 
 import Portfolio from '../Portfolio';
 import About from '../About';
-import Contact from '../Contact';
 
 import 'font-awesome/css/font-awesome.min.css'
 import './index..css';
@@ -35,7 +34,6 @@ class Navigation extends Component {
         <div className="nav-wrapper">
           <header>
             <MediaQuery minDeviceWidth={1115} component="div" className="navbar">
-              <li><NavLink to="/contact">Contact</NavLink></li>
               <li><NavLink to="/about">About</NavLink></li>
               <li><NavLink to="/">Portfolio</NavLink></li>
             </MediaQuery>
@@ -47,7 +45,6 @@ class Navigation extends Component {
           <div className="content-container">
             <Route exact path="/" component={ Portfolio }/>
             <Route path="/about" component={ About }/>
-            <Route path="/contact" component={ Contact }/>
           </div>
         </div>
       </BrowserRouter>
@@ -60,7 +57,6 @@ const Menu = ({ toggleDropped = () => {} }) => {
     <div className="mobile-links">
       <li><NavLink to="/" onClick={ toggleDropped }>Portfolio</NavLink></li>
       <li><NavLink to="/about" onClick={ toggleDropped }>About</NavLink></li>
-      <li><NavLink to="/contact" onClick={ toggleDropped }>Contact</NavLink></li>
     </div>
   );
 }

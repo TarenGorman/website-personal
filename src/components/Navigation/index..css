@@ -1,7 +1,7 @@
 .fa {
   float: right;
   cursor: pointer;
-  font-size: 2.4em;
+  font-size: 2.2em;
   padding: 16px 16px;
   overflow-y: hidden;
 }
@@ -9,7 +9,7 @@
 header {
   margin: 0px;
   padding: 0px;
-  height: 70px;
+  height: 65px;
   width: 100%;
   top: 0;
   left: 0;
@@ -33,7 +33,7 @@ header {
 .mobile-links {
   position: fixed !important;
   z-index: 1 !important;
-  top: 70px;
+  top: 60px;
   border-top-style: groove;
   border-top-width: thin;
   border-top-color: #f4f4f4;
@@ -50,7 +50,7 @@ header {
   border-bottom-color: #f4f4f4;
   display: block;
   text-align: left;
-  height: 65px;
+  height: 60px;
 }
 
 .mobile-links li a {
@@ -82,6 +82,7 @@ header {
 .navbar li {
     float: right;
     border-right: 2px solid #303030;
+    border-left: 2px solid #303030;
 }
 
 .navbar li a {
