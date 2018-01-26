@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './index..css';
-import Construction from '../Construction';
+import Airplane from '../Airplane';
 import Footer from '../Footer';
 import MediaQuery from 'react-responsive';
 
@@ -28,7 +28,7 @@ class Portfolio extends Component {
           </MediaQuery>
         </div>
         <div className="flight-container">
-          <Construction/>
+          <Airplane/>
         </div>
         <Footer/>
       </div>

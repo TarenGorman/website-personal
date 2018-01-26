@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as THREE from 'three';
 import './index..css';
 
-class Construction extends Component {
+class Airplane extends Component {
   constructor(props) {
     super(props)
 
@@ -40,8 +40,8 @@ class Construction extends Component {
 			geometry.vertices.push( vertex );
 		}
     const material = new THREE.PointsMaterial( { size: 2.0 , color: 0x0dd6dd} );
-    this.points = new THREE.Points(geometry, material)
-    this.scene.add( this.points )
+    this.points = new THREE.Points(geometry, material);
+    this.scene.add( this.points );
   }
 
   initBox() {
@@ -49,7 +49,23 @@ class Construction extends Component {
     const material = new THREE.MeshBasicMaterial( { color: 0x10d26f, wireframe: true } );
     this.mesh = new THREE.Mesh( geometry, material );
     this.scene.add( this.mesh );
-    this.mesh.position.z = -800
+    this.mesh.position.z = -800;
+  }
+
+  initAirplane() {
+    var loader = new THREE.JSONLoader();
+    const airplaneJSON = require("./models/airplane.json");
+    let airplaneParsed = loader.parse(airplaneJSON)
+    this.addModelToScene( airplaneParsed );
+  }
+
+  addModelToScene( model ) {
+      const material = new THREE.MeshBasicMaterial( { color: 0x10d26f, wireframe: true } );
+      this.mesh = new THREE.Mesh( model.geometry, material );
+      this.mesh.scale.set( 35.0, 35.0, 35.0 );
+      this.scene.add( this.mesh );
+      this.mesh.position.z = -800;
+      this.mesh.rotation.x = 0.5;
   }
 
   init() {
@@ -62,14 +78,15 @@ class Construction extends Component {
     this.camera.position.z = -400;
     this.renderer = new THREE.WebGLRenderer({alpha:true});
 
-    this.initBox();
+    // this.initBox(); // Place holder mesh for scale reference
+    this.initAirplane();
     this.initPoints();
   }
 
   animate() {
     requestAnimationFrame( this.animate );
-    const dt = this.clock.getDelta()
-    this.mesh.rotation.x += 0.008;
+    const time = this.clock.getElapsedTime()
+    this.mesh.rotation.x += 0.005 * Math.cos( time * 0.5 )
     this.points.rotation.y += 0.002;
     if (this.mount !== null) {
       this.onWindowResize()
@@ -87,4 +104,4 @@ class Construction extends Component {
   }
 }
 
-export default Construction;
+export default Airplane;

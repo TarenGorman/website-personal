@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Document, Page } from 'react-pdf';
 import MediaQuery from 'react-responsive';
 import './index..css';
-import Construction from '../Construction';
+import Airplane from '../Airplane';
 import Footer from '../Footer';
 
 class About extends Component {
@@ -29,7 +29,7 @@ class About extends Component {
           <h1><a href={require("../../images/primary_resume.pdf")} download="Taren_Gorman_Resume_2018"> Download Resume </a></h1>
         </div>
         <div className="flight-container">
-          <Construction/>
+          <Airplane/>
         </div>
         <Footer/>
       </div>
