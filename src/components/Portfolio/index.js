@@ -59,16 +59,6 @@ class ColumnItems extends Component {
           <h4> Photon Fighter </h4>
           <h5> 48 Hr Game Jam team production </h5>
         </div>
-        <div className="work-col">
-          <img src={require("../../images/test.png")} alt="Project"/>
-          <h4> C++ Parrellization </h4>
-          <h5> Class project to optimize matrix multiplication </h5>
-        </div>
-        <div className="work-col">
-          <img src={require("../../images/laser.jpg")} alt="Project"/>
-          <h4> Optics Labs </h4>
-          <h5> Collection of reports for optics lab </h5>
-        </div>
       </div>
     );
   }
