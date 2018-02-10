@@ -41,6 +41,9 @@ class ColumnItems extends Component {
     return (
       <div className="items">
         <div className="work-col">
+          <a href="https://ds-dash.herokuapp.com">
+            <span className="link-spanner"></span>
+          </a>
           <img src={require("../../images/sindy2.png")} alt="Project"/>
           <h4> Pendulum Discovery </h4>
           <h5> Sparse Identification of Nonlinear Dynamics </h5>
