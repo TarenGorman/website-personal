@@ -30,7 +30,7 @@ class Airplane extends Component {
     }
   }
 
-  initPoints() {
+  initStarPoints() {
     const geometry = new THREE.Geometry();
 		for ( var i = 0; i < 20000; i ++ ) {
 			var vertex = new THREE.Vector3();
@@ -38,8 +38,13 @@ class Airplane extends Component {
 			vertex.y = (Math.random() * 1600) - 800;
 			vertex.z = (Math.random() * 1600) - 800;
 			geometry.vertices.push( vertex );
-		}
-    const material = new THREE.PointsMaterial( { size: 2.0 , color: 0x0dd6dd} );
+    }
+    const sparks = require("./images/sparks.jpg")
+    const texture = new THREE.TextureLoader().load(sparks)
+    texture.wrapS = THREE.RepeatWrapping;
+    texture.wrapT = THREE.RepeatWrapping;
+    texture.repeat.set( 1, 1 );
+    const material = new THREE.PointsMaterial( { size: 2.0 , map: texture} );
     this.points = new THREE.Points(geometry, material);
     this.scene.add( this.points );
   }
@@ -77,17 +82,16 @@ class Airplane extends Component {
     this.camera = new THREE.PerspectiveCamera( 75, this.width / this.height, 1, 10000 );
     this.camera.position.z = -400;
     this.renderer = new THREE.WebGLRenderer({alpha:true});
-
     // this.initBox(); // Place holder mesh for scale reference
     this.initAirplane();
-    this.initPoints();
+    this.initStarPoints();
   }
 
   animate() {
     requestAnimationFrame( this.animate );
     const time = this.clock.getElapsedTime()
     this.mesh.rotation.x += 0.005 * Math.cos( time * 0.5 )
-    this.points.rotation.y += 0.002;
+    this.points.rotation.y += 0.003;
     if (this.mount !== null) {
       this.onWindowResize()
     }
