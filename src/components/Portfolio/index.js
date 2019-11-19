@@ -10,7 +10,7 @@ class Portfolio extends Component {
   render() {
     return (
       <div className="page">
-        <div className="hero-image" style={{ height: window.innerWidth / 1.65 }}>
+        <div className="hero-image" style={{ height: window.innerWidth / 3 }}>
           <div className="hero-text">
           <h1>Taren Gorman
             <br/>
